@@ -94,20 +94,47 @@ print("Clase predicha:", clase_predicha)
 
 ---
 
-## 📊 5. Explicación de la Predicción
+## 📊 5. Resultados del Modelo
+
+### 🔹 Desempeño en el conjunto de prueba
+
+El modelo alcanzó:
+
+- **Loss:** 0.3217  
+- **Accuracy:** 0.9015  
+
+Esto indica que la red neuronal logró una precisión del **90.15%**, mostrando un buen desempeño.
+
+---
+
+## 🔎 6. Predicción e Interpretación
+
+Se evaluó el siguiente caso hipotético:
+
+| Variable | Valor |
+|---------|-------|
+| Víctima trabaja | 1 |
+| Víctima escolaridad | 21 |
+| Víctima estado civil | 2 |
+| Agresor escolaridad | 21 |
+| Agresor trabaja | 1 |
+| Agresor estado civil | 2 |
 
 El modelo predijo:
 
 ```
-Probabilidad riesgo_alto ≈ 0.78  
-Clase predicha = 1  
+Probabilidad de riesgo_alto (municipio 101): 0.0984
+Clase predicha (umbral 0.5): 0
 ```
 
-Interpretación: **hay alta probabilidad de que el caso haya ocurrido en un municipio de alta incidencia (101).**
+### 🧠 Interpretación
+
+El modelo estima **BAJO riesgo** de que este caso corresponda al municipio **101**.  
+Con una probabilidad de solo **9.84%**, lo más probable es que el caso **NO** sea de ese municipio.
 
 ---
 
-## 📝 6. Conclusiones
+## 📝 7. Conclusiones
 
 - La RNA detecta patrones útiles asociados a la ubicación del hecho.  
 - Variables socioeconómicas influyen en la predicción realizada.  
@@ -115,7 +142,7 @@ Interpretación: **hay alta probabilidad de que el caso haya ocurrido en un muni
 
 ---
 
-## 📁 7. Archivos del Proyecto
+## 📁 8. Archivos del Proyecto
 
 - 📄 Dataset: base-de-datos-violencia-intrafamiliar-ano-2024_v3.xlsx
 - 🧠 Notebook del modelo: Tarea7_mineria.ipynb
